@@ -1,8 +1,8 @@
 #!/bin/bash
 source  /data/intern/fuxiaohai/miniconda3/etc/profile.d/conda.sh
 conda activate env1
-~/software/sratoolkit.3.0.5/bin/prefetch SRR82609${1}
-~/software/sratoolkit.3.0.5/bin/fasterq-dump SRR82609${1}
+~/software/sratoolkit.3.0.5/bin/prefetch SRR82609${1} -O ../data/
+~/software/sratoolkit.3.0.5/bin/fasterq-dump ../data/SRR82609${1} -O ../data/
 [[ -f "../data/SRR82609${1}_1.fastq.trimmed" ]] || cutadapt -j 8 --trim-n -a TGGAATTCTCGG -A GATCGTCGGACT -m 10 -e 0.05 -o ../data/SRR82609${1}_1.fastq.trimmed -p ../data/SRR82609${1}_2.fastq.trimmed ../data/SRR82609${1}_1.fastq ../data/SRR82609${1}_2.fastq
 # fastqc SRR82609${1}_1.fastq.trimmed SRR82609${1}_2.fastq.trimmed
 # STAR --runThreadN 8 \
