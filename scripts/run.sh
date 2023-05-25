@@ -32,7 +32,7 @@ conda activate env1
 # plotHeatmap -m ../data/23.mat.gz -out ../results/23.heatmap.png --whatToShow "plot, heatmap and colorbar"
 
 # computeMatrix reference-point -S ../data/23geneBody.bw -R ../data/geneStart.bed -b 5000 -a 5000 -bs 50 --skipZero -o ../data/23.mat.2.gz
-plotHeatmap -m ../data/23.mat.2.gz -out ../results/23.heatmap.2.png --whatToShow "plot, heatmap and colorbar"
+# plotHeatmap -m ../data/23.mat.2.gz -out ../results/23.heatmap.2.png --whatToShow "plot, heatmap and colorbar"
 
 # computeMatrix scale-regions -S ../data/23geneBody.bw -R / data/biodata/genome/hg38/annotation_and_repeats/hg38.gene.bed -m 5000 -b 5000 -a 5000 -bs 50 --skipZero -o ../data/23.mat.3.gz
 plotHeatmap -m ../data/23.mat.3.gz -out ../results/23.heatmap.3.png --whatToShow "plot, heatmap and colorbar"
