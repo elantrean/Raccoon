@@ -1,10 +1,7 @@
 library(tidyverse)
-library(stringr)
 library(reshape2)
-library()
-data_path <- "../data/23.mat.3"
+data_path <- "data/T4ph_mNETseq_wild-type_rep1_run1.matrix"
 data <- read_delim(data_path,
 delim = "\t",
-skin = 1,
-col_names = F) %>% 
+col_names = F)
 na.omit()
